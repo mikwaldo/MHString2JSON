@@ -1,5 +1,5 @@
 # String2JSON
-A program to convert Marvel heroes .string files to json files
+A program to convert Marvel Heroes .string files to json files
 and convert them back to .string files
 
 Marvel Heroes stores all of the in-game text in .string files
