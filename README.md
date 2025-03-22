@@ -18,6 +18,9 @@ download and unzip to any folder
 To use just drap-and-drop a .string or .json file onto 
 String2JSON.exe and it will be converted
 
+Marvel Heroes .string files are in Marvel Heroes\Data\Game\Loco 
+with folders for each language
+
 Example:
 
 String2JSON.exe my.string
