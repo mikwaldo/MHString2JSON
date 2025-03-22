@@ -12,7 +12,7 @@ in any text editor without knowing the .string format
 When your edits are complete, String2JSON will convert your 
 new JSON back into a .string file
 
-The precompiled version is in Strng2JSON.zip, 
+The precompiled version is in String2JSON.zip, 
 download and unzip to any folder
 
 To use just drap-and-drop a .string or .json file onto 
