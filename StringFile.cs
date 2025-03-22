@@ -210,7 +210,6 @@ namespace String2JSON
         {
             int headerlen = 6;
             int textPos = 0;
-            StringInfo stringInfo;
 
             //add up the size of all the StringMapEntry
             //have to loop through them because number of Variants is variable
@@ -355,7 +354,11 @@ namespace String2JSON
             EntryCount = entryCount;
             StringMap = new(stringMap);
         }
-        public StringFile() { }
+        public StringFile() 
+        {
+            Magic = "";
+            StringMap = new();
+        }
     }
 /// <summary>
 /// This class holds a String ID and its associated string
@@ -375,7 +378,11 @@ namespace String2JSON
         /// <param name="variants"></param>
         /// <param name="flagsProduced"></param>
         /// <param name="strinG"></param>
-        public StringMapEntry() { }
+        public StringMapEntry() 
+        { 
+            Variants= Array.Empty<StringVariation>();
+            String = "";
+        }
         public StringMapEntry(StringVariation[] variants,ushort flagsProduced,string strinG)
         {
             var variantNum = variants.Length;
@@ -427,7 +434,10 @@ namespace String2JSON
         /// <summary>
         /// Class needs a parameterized initializer for the JSON deserializer
         /// </summary>
-        public StringVariation() { }
+        public StringVariation() 
+        {
+            String = "";
+        }
         public StringVariation(ulong flagsConsumed, ushort flagsProduced, string StrinG)
         {
             FlagsConsumed = flagsConsumed;

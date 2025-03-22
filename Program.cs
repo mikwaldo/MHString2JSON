@@ -10,7 +10,7 @@ namespace String2JSON
     {
         static void Main(string[] args)
         {
-            StringFile stringFile, newstringFile;
+            StringFile? stringFile, newstringFile;
             var options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
@@ -41,7 +41,7 @@ namespace String2JSON
                         newstringFile = JsonSerializer.Deserialize<StringFile>(jsonString, options);
                         using (FileStream newfs = new FileStream(args[0] + ".string", FileMode.Create))
                         {
-                            newstringFile.WriteStringFile(newfs);
+                            newstringFile?.WriteStringFile(newfs);
                         }
                     }
                 }
