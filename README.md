@@ -13,14 +13,12 @@ When your edits are complete, String2JSON will convert your
 new JSON back into a .string file
 
 To use just drap-and-drop a .string or .json file onto 
-String2JSON and it will be converted
+String2JSON.exe and it will be converted
 
-Example
+Example:
 
 String2JSON.exe my.string
-
-will create a JSON file my.string.json
+- will create a JSON file my.string.json
 
 String2JSON.exe my.string.json
-
-will create a .string file my.string.json.string
+- will create a .string file my.string.json.string
