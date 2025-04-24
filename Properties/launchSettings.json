@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "String2JSON": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\mikew\\source\\repos\\String2JSON\\bin\\Release\\net8.0"
+    }
+  }
+}

@@ -410,7 +410,11 @@ namespace String2JSON
                 : Array.Empty<StringVariation>();
 
             FlagsProduced = reader.ReadUInt16();
-            String = reader.ReadNullTerminatedString(reader.ReadUInt32());
+            var stringLoc = reader.ReadUInt32();
+            if (stringLoc <= reader.BaseStream.Length)
+                String = reader.ReadNullTerminatedString(stringLoc);
+            else
+                Console.WriteLine("Possible .string file corruption.  String beyond end of file");
 
             for (int i = 0; i < Variants.Length; i++)
             {
@@ -457,7 +461,11 @@ namespace String2JSON
         {
             FlagsConsumed = reader.ReadUInt64();
             FlagsProduced = reader.ReadUInt16();
-            String = reader.ReadNullTerminatedString(reader.ReadUInt32());
+            var stringLoc = reader.ReadUInt32();
+            if (stringLoc<= reader.BaseStream.Length)
+                String = reader.ReadNullTerminatedString(stringLoc);
+            else
+                Console.WriteLine("Possible .string file corruption.  Variant string beyond end of file");
         }
     }
 }
